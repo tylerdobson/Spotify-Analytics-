@@ -4,12 +4,12 @@ This repository includes public-safe proof artifacts generated from demo mode.
 
 ## Proof Assets
 
-- Home dashboard screenshot: `docs/screenshots/dashboard-home.png`
-- Top content screenshot: `docs/screenshots/top-content.png`
-- Listening history screenshot: `docs/screenshots/listening-history.png`
-- Playlist manager screenshot: `docs/screenshots/playlists.png`
-- Settings and exports screenshot: `docs/screenshots/settings.png`
-- Mobile layout screenshot: `docs/screenshots/mobile-home.png`
+- Home dashboard screenshot: `docs/screenshots/dashboard-home.jpg`
+- Top content screenshot: `docs/screenshots/top-content.jpg`
+- Listening history screenshot: `docs/screenshots/listening-history.jpg`
+- Playlist manager screenshot: `docs/screenshots/playlists.jpg`
+- Settings and exports screenshot: `docs/screenshots/settings.jpg`
+- Mobile layout screenshot: `docs/screenshots/mobile-home.jpg`
 - Demo recording: `docs/proof/spotify-analytics-demo.gif`
 
 ## Verification Performed
