@@ -1,6 +1,7 @@
 .env
 .spotify_cache
 .deps/
+.media_deps/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -10,6 +11,10 @@ data/oauth_callback_url.txt
 data/cache/*
 !data/cache/.gitkeep
 exports/
+playwright-report/
+test-results/
+tmp-*.png
+assets/demo/demo-source.webm
 *.log
 streamlit.out.log
 streamlit.err.log
