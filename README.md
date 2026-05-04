@@ -13,11 +13,11 @@ This project is designed as a portfolio-ready example of OAuth API integration, 
 
 The app is designed for local OAuth because Spotify redirects to a loopback callback during authentication.
 
-- Demo screenshot: [docs/screenshots/dashboard-home.png](docs/screenshots/dashboard-home.png)
+- Demo screenshot: [docs/screenshots/dashboard-home.jpg](docs/screenshots/dashboard-home.jpg)
 - Proof recording: [docs/proof/spotify-analytics-demo.gif](docs/proof/spotify-analytics-demo.gif)
 - Validation notes: [docs/PORTFOLIO_PROOF.md](docs/PORTFOLIO_PROOF.md)
 
-![Spotify Analytics dashboard screenshot](docs/screenshots/dashboard-home.png)
+![Spotify Analytics dashboard screenshot](docs/screenshots/dashboard-home.jpg)
 
 ## Features
 
@@ -65,12 +65,12 @@ Spotify-Analytics-/
 |   |-- proof/
 |   |   `-- spotify-analytics-demo.gif
 |   `-- screenshots/
-|       |-- dashboard-home.png
-|       |-- top-content.png
-|       |-- listening-history.png
-|       |-- playlists.png
-|       |-- settings.png
-|       `-- mobile-home.png
+|       |-- dashboard-home.jpg
+|       |-- top-content.jpg
+|       |-- listening-history.jpg
+|       |-- playlists.jpg
+|       |-- settings.jpg
+|       `-- mobile-home.jpg
 `-- tests/
     `-- test_data_processor.py
 ```
