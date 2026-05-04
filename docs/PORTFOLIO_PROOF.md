@@ -1,27 +1,38 @@
 # Portfolio Proof
 
-This repository includes public-safe proof artifacts generated from demo mode.
+This repository includes public-safe proof artifacts generated from demo mode. Demo mode uses deterministic sample data and does not expose private Spotify listening data, credentials, or OAuth tokens.
 
 ## Proof Assets
 
-- Home dashboard screenshot: `docs/screenshots/dashboard-home.jpg`
-- Top content screenshot: `docs/screenshots/top-content.jpg`
-- Listening history screenshot: `docs/screenshots/listening-history.jpg`
-- Playlist manager screenshot: `docs/screenshots/playlists.jpg`
-- Settings and exports screenshot: `docs/screenshots/settings.jpg`
-- Mobile layout screenshot: `docs/screenshots/mobile-home.jpg`
-- Demo recording: `docs/proof/spotify-analytics-demo.gif`
+- Hero dashboard screenshot: `assets/demo/hero.png`
+- Listening history dashboard screenshot: `assets/demo/dashboard.png`
+- Audio features screenshot: `assets/demo/features.png`
+- Playlist workflow screenshot: `assets/demo/workflow.png`
+- Demo video poster: `assets/demo/demo-poster.png`
+- Demo recording: `assets/demo/demo.mp4`
+
+The screenshots are captured from a real Streamlit session at a 1600x900 viewport with device scale factor 2, producing 3200x1800 PNG files for crisp GitHub README rendering. The MP4 demo is generated from the same fresh app captures at 1920x1080.
 
 ## Verification Performed
 
 - Streamlit server started locally.
-- Home page loaded successfully.
-- Main dashboard pages loaded in a browser automation run.
-- Mobile viewport rendered without layout failure.
+- Main dashboard pages loaded in browser automation.
+- Media capture workflow regenerated all files in `assets/demo`.
+- README image and video references resolve to existing files.
 - Demo-mode dashboard rendered without Spotify credentials.
 - Python files compiled successfully.
 - Data-processing tests passed.
 - Public proof artifacts do not expose private Spotify listening data or OAuth tokens.
+
+## Local Validation Commands
+
+```powershell
+python -m compileall app.py config.py data_processor.py spotify_client.py visualizations.py oauth_callback_capture.py tests
+python -m unittest discover -s tests
+$env:SPOTIFY_DEMO_MODE="true"
+streamlit run app.py --server.port 8502 --server.headless true
+npm run capture:media
+```
 
 ## Recruiter-Facing Summary
 
