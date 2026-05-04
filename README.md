@@ -9,15 +9,25 @@ A professional Streamlit dashboard for personal Spotify analytics. The app authe
 
 This project is designed as a portfolio-ready example of OAuth API integration, local data persistence, data visualization, and product-minded dashboard design.
 
-## Live Proof
+![Spotify Analytics dashboard overview](assets/demo/hero.png)
+
+## Demo
 
 The app is designed for local OAuth because Spotify redirects to a loopback callback during authentication.
 
-- Demo screenshot: [docs/screenshots/dashboard-home.jpg](docs/screenshots/dashboard-home.jpg)
-- Proof recording: [docs/proof/spotify-analytics-demo.gif](docs/proof/spotify-analytics-demo.gif)
+- Walkthrough video: [assets/demo/demo.mp4](assets/demo/demo.mp4)
+- Screenshot set: [assets/demo](assets/demo)
 - Validation notes: [docs/PORTFOLIO_PROOF.md](docs/PORTFOLIO_PROOF.md)
 
-![Spotify Analytics dashboard screenshot](docs/screenshots/dashboard-home.jpg)
+[![Spotify Analytics demo video](assets/demo/demo-poster.png)](assets/demo/demo.mp4)
+
+## Screenshots
+
+![Listening history charts in Spotify Analytics](assets/demo/dashboard.png)
+
+![Audio feature analysis view in Spotify Analytics](assets/demo/features.png)
+
+![Playlist manager workflow in Spotify Analytics](assets/demo/workflow.png)
 
 ## Features
 
@@ -45,13 +55,25 @@ The app is designed for local OAuth because Spotify redirects to a loopback call
 
 ```text
 Spotify-Analytics-/
+|-- .github/
+|   `-- workflows/
+|       `-- refresh-demo-media.yml
 |-- app.py
 |-- config.py
 |-- data_processor.py
 |-- spotify_client.py
 |-- visualizations.py
 |-- oauth_callback_capture.py
+|-- package.json
 |-- requirements.txt
+|-- assets/
+|   `-- demo/
+|       |-- hero.png
+|       |-- dashboard.png
+|       |-- features.png
+|       |-- workflow.png
+|       |-- demo-poster.png
+|       `-- demo.mp4
 |-- .env.example
 |-- .gitignore
 |-- data/
@@ -62,15 +84,8 @@ Spotify-Analytics-/
 |   |-- API_LIMITATIONS.md
 |   |-- PORTFOLIO_PROOF.md
 |   |-- SETUP.md
-|   |-- proof/
-|   |   `-- spotify-analytics-demo.gif
-|   `-- screenshots/
-|       |-- dashboard-home.jpg
-|       |-- top-content.jpg
-|       |-- listening-history.jpg
-|       |-- playlists.jpg
-|       |-- settings.jpg
-|       `-- mobile-home.jpg
+|-- scripts/
+|   `-- capture_media.js
 `-- tests/
     `-- test_data_processor.py
 ```
@@ -131,6 +146,41 @@ Demo mode uses realistic sample records and is safe for public screenshots.
 python -m unittest discover -s tests
 python -m compileall .
 ```
+
+## Regenerate Portfolio Media
+
+The media workflow uses demo mode so screenshots and video never expose private Spotify data.
+
+Install the optional Playwright development dependency:
+
+```powershell
+npm install
+npx playwright install chromium
+```
+
+Run the app in demo mode:
+
+```powershell
+$env:SPOTIFY_DEMO_MODE="true"
+streamlit run app.py --server.port 8502 --server.headless true
+```
+
+In another PowerShell window, capture the assets:
+
+```powershell
+npm run capture:media
+```
+
+This regenerates:
+
+- `assets/demo/hero.png`
+- `assets/demo/dashboard.png`
+- `assets/demo/features.png`
+- `assets/demo/workflow.png`
+- `assets/demo/demo-poster.png`
+- `assets/demo/demo.mp4`
+
+The repository also includes `.github/workflows/refresh-demo-media.yml`, which can regenerate the same media in GitHub Actions and commit the refreshed files back to `main`.
 
 ## Spotify API Limitation
 
