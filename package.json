@@ -1,0 +1,12 @@
+{
+  "name": "spotify-analytics-media-capture",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Development-only Playwright workflow for regenerating portfolio media.",
+  "scripts": {
+    "capture:media": "node scripts/capture_media.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}
