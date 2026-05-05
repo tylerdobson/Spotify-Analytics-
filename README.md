@@ -7,7 +7,9 @@
 
 A professional Streamlit dashboard for personal Spotify analytics. The app authenticates with Spotify, shows live playback, analyzes top tracks and artists, stores recently played history in SQLite, audits playlists, and exports listening data for deeper analysis.
 
-This project is designed as a portfolio-ready example of OAuth API integration, local data persistence, data visualization, and product-minded dashboard design.
+This project demonstrates OAuth API integration, local data persistence, data visualization, and product-minded dashboard design.
+
+Finding: In May 2026, my saved Spotify history showed a repeat-listening pattern: the leading artist had 8 plays, and the top repeated track appeared 4 times, turning the raw API feed into a repeat-listening pattern.
 
 ![Spotify Analytics dashboard overview](assets/demo/hero.png)
 
@@ -39,7 +41,7 @@ The app is designed for local OAuth because Spotify redirects to a loopback call
 - Playlist manager with playlist export, backup snapshots, duplicate scanning, and mood playlist workflow.
 - Discovery analysis for new artists, first-listen dates, and low-popularity favorite tracks.
 - CSV and HTML report exports.
-- Demo mode for screenshots, portfolio review, and UI exploration without exposing private Spotify data.
+- Demo mode for screenshots, public review, and UI exploration without exposing private Spotify data.
 
 ## Tech Stack
 
@@ -202,7 +204,7 @@ This project demonstrates:
 - Data processing with Pandas.
 - Interactive visualization with Plotly.
 - Streamlit product UI development.
-- Public-proof workflow using demo-safe screenshots and recording.
+- Public validation workflow using demo-safe screenshots and recording.
 
 ## License
 

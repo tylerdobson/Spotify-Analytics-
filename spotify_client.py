@@ -49,6 +49,7 @@ class SpotifyClient:
             scope=SPOTIFY_SCOPES,
             cache_path=str(self.config["token_cache_path"]),
             open_browser=False,
+            show_dialog=True,
         )
         self._sp = spotipy.Spotify(auth_manager=self.auth_manager, requests_timeout=20, retries=3)
 

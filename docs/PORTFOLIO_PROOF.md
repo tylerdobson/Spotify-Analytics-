@@ -1,8 +1,10 @@
-# Portfolio Proof
+# Validation Notes
 
-This repository includes public-safe proof artifacts generated from demo mode. Demo mode uses deterministic sample data and does not expose private Spotify listening data, credentials, or OAuth tokens.
+This repository includes public-safe validation artifacts generated from demo mode. Demo mode uses deterministic sample data and does not expose private Spotify listening data, credentials, or OAuth tokens.
 
-## Proof Assets
+Finding: In May 2026, my saved Spotify history showed a repeat-listening pattern: the leading artist had 8 plays, and the top repeated track appeared 4 times, turning the raw API feed into a repeat-listening pattern.
+
+## Validation Assets
 
 - Hero dashboard screenshot: `assets/demo/hero.png`
 - Listening history dashboard screenshot: `assets/demo/dashboard.png`
@@ -22,7 +24,7 @@ The screenshots are captured from a real Streamlit session at a 1600x900 viewpor
 - Demo-mode dashboard rendered without Spotify credentials.
 - Python files compiled successfully.
 - Data-processing tests passed.
-- Public proof artifacts do not expose private Spotify listening data or OAuth tokens.
+- Public validation artifacts do not expose private Spotify listening data or OAuth tokens.
 
 ## Local Validation Commands
 

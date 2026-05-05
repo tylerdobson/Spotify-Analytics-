@@ -13,7 +13,7 @@ The dashboard treats restricted endpoints as optional. If Spotify returns `403` 
 
 ## Why This Matters
 
-The project remains portfolio-ready even when Spotify API access differs between developer accounts. The important engineering behavior is graceful degradation, not assuming every optional endpoint is available.
+The project remains review-ready even when Spotify API access differs between developer accounts. The important engineering behavior is graceful degradation, not assuming every optional endpoint is available.
 
 ## Reference
 
